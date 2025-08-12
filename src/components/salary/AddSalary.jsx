@@ -57,7 +57,7 @@ const AddSalary = () => {
             };
 
             const response = await axios.post(
-                'http://localhost:3000/api/salary/add-salary',
+                'https://employee-ms-backend-eight.vercel.app/api/salary/add-salary',
                 payload,
                 {
                     headers: {

@@ -13,7 +13,7 @@ const ViewLeave = () => {
             const token = localStorage.getItem('token');
             try {
                 setIsLoading(true); // Start loading
-                const response = await axios.get(`http://localhost:3000/api/leave/detail/${id}`, {
+                const response = await axios.get(`https://employee-ms-backend-eight.vercel.app/api/leave/detail/${id}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (response.data.success) {
@@ -41,7 +41,7 @@ const ViewLeave = () => {
 
         try {
             setIsLoading(true); // Start loading
-            const response = await axios.put(`http://localhost:3000/api/leave/${id}`, { status }, {
+            const response = await axios.put(`https://employee-ms-backend-eight.vercel.app/api/leave/${id}`, { status }, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (response.data.success) {
@@ -69,7 +69,7 @@ const ViewLeave = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                         <div>
                             <img
-                                src={`http://localhost:3000/${leave.employeeId?.userId?.profileImage || 'profile-img.png'}`}
+                                src={`https://employee-ms-backend-eight.vercel.app/${leave.employeeId?.userId?.profileImage || 'profile-img.png'}`}
                                 className='rounded-full w-72'
                                 alt="Profile"
                             />

@@ -45,7 +45,7 @@ const addEmployee = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:3000/api/employee/add', formDataObj, {
+            const response = await axios.post('https://employee-ms-backend-eight.vercel.app/api/employee/add', formDataObj, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }

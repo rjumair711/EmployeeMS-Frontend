@@ -12,7 +12,7 @@ const ViewEmployee = () => {
             const token = localStorage.getItem('token');
             try {
                 setIsLoading(true); // Start loading
-                const response = await axios.get(`http://localhost:3000/api/employee/${id}`, {
+                const response = await axios.get(`https://employee-ms-backend-eight.vercel.app/api/employee/${id}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (response.data.success) {
@@ -47,7 +47,7 @@ const ViewEmployee = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div>
                     <img
-                        src={`http://localhost:3000/${employee?.userId?.profileImage || 'profile-img.png'}`}
+                        src={`https://employee-ms-backend-eight.vercel.app/${employee?.userId?.profileImage || 'profile-img.png'}`}
                         className='rounded-full w-72'
                         alt="Profile"
                     />

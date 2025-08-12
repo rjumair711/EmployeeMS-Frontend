@@ -27,7 +27,7 @@ const Setting = () => {
       setError("Passwords do not match");
     } else {
       try {
-        const response = await axios.put("http://localhost:3000/api/setting/change-password", setting, {
+        const response = await axios.put("https://employee-ms-backend-eight.vercel.app/api/setting/change-password", setting, {
           headers: {
             Authorization: `Bearer ${token}`
           }

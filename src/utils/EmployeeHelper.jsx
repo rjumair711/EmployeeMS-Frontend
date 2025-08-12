@@ -7,7 +7,7 @@ import axios from "axios";
  export const fetchEmployees = async (id) => {
   const token = localStorage.getItem('token');
   try {
-    const response = await axios.get(`http://localhost:3000/api/employee/department/${id}`, {
+    const response = await axios.get(`https://employee-ms-backend-eight.vercel.app/api/employee/department/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -34,7 +34,7 @@ export const getColumns = () => [
     name: "Image",
     cell: (row) => (
       <img
-        src={`http://localhost:3000/${row?.userId?.profileImage || 'profile-img.png'}`}
+        src={`https://employee-ms-backend-eight.vercel.app/${row?.userId?.profileImage || 'profile-img.png'}`}
         alt="Profile"
         className="w-10 h-10 object-cover rounded-full"
       />
