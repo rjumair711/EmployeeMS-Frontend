@@ -15,7 +15,7 @@ const EmployeeList = () => {
     const fetchEmployees = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get('https://employee-ms-backend-eight.vercel.app/api/employee', {
+        const response = await axios.get('http://localhost:3000/api/employee', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

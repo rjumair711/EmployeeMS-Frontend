@@ -29,7 +29,7 @@ const EditEmployee = () => {
         const fetchEmployee = async () => {
             const token = localStorage.getItem('token');
             try {
-                const response = await axios.get(`https://employee-ms-backend-eight.vercel.app/api/employee/${id}`, {
+                const response = await axios.get(`http://localhost:3000/api/employee/${id}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (response.data.success) {
@@ -78,7 +78,7 @@ const EditEmployee = () => {
 
   try {
     const token = localStorage.getItem('token');
-    const response = await axios.put(`https://employee-ms-backend-eight.vercel.app/api/employee/${id}`, payload, {
+    const response = await axios.put(`http://localhost:3000/api/employee/${id}`, payload, {
       headers: {
         Authorization: `Bearer ${token}`,
       }

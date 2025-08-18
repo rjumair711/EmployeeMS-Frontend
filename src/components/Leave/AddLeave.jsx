@@ -23,7 +23,7 @@ const AddLeave = () => {
         const token = localStorage.getItem('token');
         try {
             setIsLoading(true); // Start loading
-            const response = await axios.post(`https://employee-ms-backend-eight.vercel.app/api/leave/add-leave`, leave, {
+            const response = await axios.post(`http://localhost:3000/api/leave/add-leave`, leave, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (response.data.success) {

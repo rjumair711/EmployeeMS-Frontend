@@ -5,7 +5,7 @@ import axios from 'axios';
  const fetchDepartments = async () => {
   const token = localStorage.getItem('token');
   try {
-    const response = await axios.get('https://employee-ms-backend-eight.vercel.app/api/department', {
+    const response = await axios.get('http://localhost:3000/api/department', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -52,7 +52,7 @@ export const DepartmentButtons = ({ id, onDepartmentDelete }) => {
         const confirm = window.confirm("Do you want to delete the department?")
         if (confirm) {
             try {
-                const response = await axios.delete(`https://employee-ms-backend-eight.vercel.app/api/department/${id}`, {
+                const response = await axios.delete(`http://localhost:3000/api/department/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
